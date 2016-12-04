@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/category_pages.css">
+    <link href="/lightbox2-master/src/css/lightbox.css" rel="stylesheet">
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+<div id="panel_container" class="container">
+    <header id="header" class="row header_or_footer panel">
+        <p class="col-xs-4 col-sm-2 col-md-2 col-lg-12"><a href="/" id="homepage_link">THAO HUONG</a></p>
+        <p class="col-xs-8 col-sm-10 col-md-10 col-lg-12" id="description" onload="change_classes()">Master's in
+            Human-Computer
+            Interaction at the University of Michigan | Computer Science | Art History | Literature | <a
+                    href="/resume">Resume</a></p>
+    </header>
+    <div id="title_row" class="row panel">
+        <h1 id="page_title" class="page_title col-xs-10">{{ page_title }}</h1>
+        <!-- Use any element to open the sidenav -->
+        <div onclick="openNav()" id="open_symbol_div" class="col-xs-2">
+            <img id="open_nav_symbol" src="/images/plus_dim.png" alt=" ">
+        </div>
+    </div>
+    <nav id="mySidenav" class="sidenav row panel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a id="nav_thao_huong" class="col-xs-12 col-md-4" href="/">Thao Huong</a>
+        <a id="nav_code"
+           {% if category== "code" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/category/code">Code</a>
+        <a id="nav_interactive"
+           {% if category== "interactive" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/category/interactive">Interactive</a>
+        <a id="nav_drawings"
+           {% if category== "drawings" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/category/drawings">Drawings</a>
+        <a id="nav_comics"
+           {% if category== "comics" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/category/comics">Comics</a>
+        <a id="nav_paintings"
+           {% if category== "paintings" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/category/paintings">Paintings</a>
+        <a id="nav_about"
+           {% if category== "about" %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12 current"
+        {% else %}
+        class = "col-xs-12 col-sm-4 col-md-4 col-lg-12"
+        {% endif %}
+        href="/about">About Me</a>
+    </nav>
+
+</div>
+
+<div id="mainpage" class="container">
+    <div id="containing_div" class="row container mainpage_desktop">
+        <h1 id="page_title_desktop" class="page_title col-xs-12">{{ page_title }}</h1>
+        {% block content %}
+        {% for gallery_item in gallery_items %}
+        <div class="gallery_item col-xs-12 col-md-6 col-lg-4">
+            <div class="image_container">
+                <a href="{{ gallery_item.post_path }}"><img class="gallery_image"
+                                                            src="{{ gallery_item.image_path }}"
+                                                            alt="{{ gallery_item.name }}"></a>
+            </div>
+            <a href="{{ gallery_item.post_path }}"><h2 class="gallery_title">{{ gallery_item.name }}</h2></a>
+            <div class="gallery_description">{{ gallery_item.content }} <a href="{{ gallery_item.post_path }}">More</a></div>
+
+        </div>
+        {% endfor %}
+        {% endblock %}
+    </div>
+    <footer id="footer" class="row header_or_footer mainpage_desktop">
+        <p class="col-xs-12">Contact me: NTHuong [at] umich [dot] edu</p>
+        <p class="col-xs-12">&copy; 2016 Nguyen Thao Huong</p>
+    </footer>
+</div>
+<div id="clearingdiv"></div>
+
+<script src="/lightbox2-master/src/js/lightbox.js"></script>
+</body>
+<script src="/js/category_pages.js"></script>
+</html>

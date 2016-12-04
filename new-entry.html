@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-formhelpers.min.css">
+
+    <title>{{ title }}</title>
+
+
+</head>
+<body>
+{% block content %}
+<header>
+    <nav>
+        <a href="/login"> Login</a>
+    </nav>
+</header>
+{{ message }}
+<form action="/new-entry" method="post">
+    <fieldset>
+        <p><label>Name: <input type="text" class="form-control" name="name"></label></p>
+        <p><label>Content: <textarea class="form-control" name="content"></textarea></label></p>
+        <p><label>Post Path 1: <input type="text" class="form-control" name="post-path"></label></p>
+        <p><label>Tag 1: <input type="text" class="form-control" name="tag1"></label></p>
+        <p><label>Tag 2: <input type="text" class="form-control" name="tag2"></label></p>
+        <p><label>Tag 3: <input type="text" class="form-control" name="tag3"></label></p>
+        <p><label>Tag 4: <input type="text" class="form-control" name="tag4"></label></p>
+        <p><label>Tag 5: <input type="text" class="form-control" name="tag5"></label></p>
+        <p><label>Image Path 1: <input type="text" class="form-control" name="image-path1"></label></p>
+        <p><label>Image Path 2: <input type="text" class="form-control" name="image-path2"></label></p>
+        <p><label>Image Path 3: <input type="text" class="form-control" name="image-path3"></label></p>
+        <p><label>Image Path 4: <input type="text" class="form-control" name="image-path4"></label></p>
+        <p><label>Image Path 5: <input type="text" class="form-control" name="image-path5"></label></p>
+        <p><label>Image Path 6: <input type="text" class="form-control" name="image-path6"></label></p>
+        <p><label>Image Path 7: <input type="text" class="form-control" name="image-path7"></label></p>
+        <p><label>Image Path 8: <input type="text" class="form-control" name="image-path8"></label></p>
+        <p><input type="submit" value="new-entry"></p>
+    </fieldset>
+</form>
+{% endblock %}
+<footer>
+    <p>Copyright &copy; Thao Huong Nguyen from the University of Michigan<br/>
+        <a href="thao-huong.herokuapp.com">School of Information</a>.</p>
+</footer>
+
+<script src="/bootstrap/js/jquery-3.1.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/bootstrap-formhelpers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/homepage.css">
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Thao Huong's Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+{% block content %}
+<div class="container">
+    <header id="header" class="row header_or_footer">
+        <p class="col-xs-4 col-sm-2 col-md-2"><a href="/" id="homepage_link">THAO HUONG</a></p>
+        <p class="col-xs-8 col-sm-10 col-md-10" id="description" onload="change_classes()">Master's in Human-Computer
+            Interaction at the University of Michigan | Computer Science | Art History | Literature | <a
+                    href="/resume">Resume</a></p>
+    </header>
+    <nav id="containing_div" class="row">
+        <img id="main_image" src="" alt="background image"/>
+
+        <div class="navlink" id="code"><a href="/category/code">Code</a></div>
+        <div class="navlink" id="interactive"><a href="/category/interactive">Interactive</a></div>
+        <div class="navlink" id="drawings"><a href="/category/drawings">Drawings</a></div>
+        <div class="navlink" id="comics"><a href="/category/comics">Comics</a></div>
+        <div class="navlink" id="paintings"><a href="/category/paintings">Paintings</a></div>
+        <div class="navlink" id="about"><a href="/about">ABOUT ME</a></div>
+    </nav>
+    <footer id="footer" class="row header_or_footer">
+        <p class="col-xs-12">Contact me: NTHuong [at] umich [dot] edu</p>
+        <p class="col-xs-12">&copy; 2016 Nguyen Thao Huong</p>
+    </footer>
+</div>
+
+{% endblock %}
+</body>
+<script src="/js/home_page.js"></script>
+</html>

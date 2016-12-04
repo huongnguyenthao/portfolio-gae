@@ -1,0 +1,145 @@
+.container {
+	width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+	.header_or_footer {
+		font-size: 22px;
+
+	}
+
+	#homepage_link {
+		font-size: 53px;
+		line-height: 53px;
+		width: 40%;
+	}
+
+	#header >p {
+		padding: 25px 25px 0px 0px;
+	}
+
+
+	#code {
+		bottom: 70%;
+	}
+
+	#interactive {
+		bottom: 62.5%;
+	}
+
+	#drawings {
+		bottom: 50%;
+	}
+
+	#comics {
+		bottom: 38%;
+	}
+	#paintings {
+		bottom: 26%;
+	}
+	#about {
+		bottom:21%;
+	}
+
+
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+	#header {
+		position: fixed;
+		left: 0px;
+		z-index: 1;
+		width: 40%;
+		height: 100%;
+		background: rgb(96, 96, 96);
+		
+	    background: red; /* For browsers that do not support gradients */ /*Safari 5.1-6*/ /*Opera 11.1-12*/ /*Fx 3.6-15*/
+	    background: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));
+	    background: -o-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));
+	    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); /*Standard*/
+	}
+	#main_image {
+		z-index: -1;
+	}
+
+	#homepage_link {
+		font-size: 80px;
+		line-height: 80px;
+		padding: 0;
+		position: fixed;
+		bottom: 70vh;
+	}
+
+	#homepage_link > a {
+		margin: 0;
+	}
+
+	#header > p {
+		padding: 0;
+		margin-left: 10vmin;
+		width: 30%;
+		text-align: justify;
+	}
+
+	#description {
+		position: fixed;
+		bottom: 35vh;
+	}
+
+	#footer {
+		z-index: 2;
+		position: fixed;
+		left: 0px;
+		background: none;
+		top: 65vh;
+		margin-left: 5vmin;
+		padding: 0;
+		width: 30%;
+	}
+
+	#footer > p {
+		color: rgb(270, 270, 270); 
+		margin: 0;
+		text-align: justify;
+	}
+
+	.container {
+		padding: 0;
+	}
+
+	.navlink {
+		font-size: 42px;
+	}
+
+	#code {
+		bottom: 78%;
+		left: 72.5%;
+	}
+
+	#interactive {
+		bottom: 69%;
+		left: 72%;
+	}
+
+	#drawings {
+		bottom: 54%;
+		left: 50%;
+	}
+
+	#comics {
+		bottom: 40%;
+		left: 54.5%;
+	}
+	#paintings {
+		bottom: 26%;
+		left: 59.5%;
+	}
+	#about {
+		bottom:28%;
+		left: 33%;
+	}
+
+
+}

@@ -1,0 +1,348 @@
+a:link {
+    color: rgb(235, 235, 235);
+}
+
+a:visited {
+    color: rgb(235, 235, 235);
+}
+
+
+
+.gallery_item {
+	/*height: 50vmax;*/
+	margin-bottom: 15px;
+}
+
+.image_container {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery_image {
+	position: absolute;
+    margin: auto; 
+    min-height: 100%;
+    min-width: 100%;
+
+    /* For the following settings we set 100%, but it can be higher if needed 
+    See the answer's update */
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;	
+}
+
+.gallery_title {
+	color: rgb(235, 235, 235); 
+	font-size: 3.5vmax;
+	line-height: 3.5vmax;
+	margin-top: 1vmax;
+}
+
+.gallery_description {
+	color: rgb(235, 235, 235); 
+	font-size: 1.25xmax;
+	line-height: 3vmax;
+}
+
+.page_title {
+	color: rgb(235, 235, 235); 
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 35px;
+}
+
+.item_image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+#header {
+	padding-left: 2vmin;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #ffffff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*
+a {
+	color: rgb(270, 270, 270); 
+}
+
+a:visited {
+	color: rgb(270, 270, 270); 	
+}
+
+a:link {
+	color: rgb(270, 270, 270); 
+}
+*/
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#title_row {
+	position: relative;
+}
+
+#open_symbol_div {
+	height: 10vw;
+	position: absolute;
+	right: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#open_nav_symbol {
+	height: 100%;
+	width: auto;
+}
+
+.current {
+    color: #FFFFFF !important;
+}
+
+#page_title_desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 750px) {
+
+    #open_symbol_div {
+        display: none;
+    }
+
+	#open_nav_symbol {
+		display: none;
+		background: white;
+	}
+
+	#nav_thao_huong {
+		display: none;
+	}
+
+	.sidenav {
+	    width: 100%; /* 100% Full-width */
+	    height: auto; /* 0 width - change this with JavaScript */
+	    position: static; /* Stay in place */
+	    z-index: auto;
+	    background-color: #323435; 
+	   	overflow-x: auto; /* Disable horizontal scroll */
+	   	padding: 0px;
+	   	margin-bottom: 16px;
+	   	margin-left: auto;
+	   	margin-right: auto;
+	}
+
+	/* The navigation menu links */
+	.sidenav a {
+	    text-decoration: none;
+	    font-size: 3vmin;
+	    color: #f1f1f1;
+	    display: inline-block;
+	    text-transform: uppercase;
+	    border-style: solid;
+    	border-width: 5px;
+    	border-color: #222425;
+    	padding: 1vh 1vw 1vh 1vw;
+    	text-align: center;
+	}
+
+	/* Position and style the close button (top right corner) */
+	.sidenav .closebtn {
+	    display: none;
+	}
+
+	.current {
+	    color: #323435 !important;
+		background: #f1f1f1 !important;
+	}
+
+	.container {
+	    width: 100%;
+	}
+
+}
+
+@media only screen and (min-width: 970px) {
+    html,body {
+        padding:0;
+        margin:0;
+        height:100%;
+        overflow-x: hidden;
+    }
+
+    #page {
+        width: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #panel_container {
+        position: relative;
+        margin: 0px;
+        width:250px;
+        background: rgb(36, 36, 36);
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        height: 100%;
+        overflow-x: auto;
+        background: rgb(96, 96, 96);
+        background: -webkit-linear-gradient(left top, #000206, #212325); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom right, #000206, #212325); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom right, #000206, #212325); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom right, #000206, #212325);
+        z-index: 3;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+    #mainpage {
+        z-index: 2;
+        position:absolute;
+        top:0;
+        left:250px;
+        right:0;
+        bottom:0;
+        overflow: auto;
+        width: auto;
+        background: rgb(96, 96, 96);
+        background: -webkit-linear-gradient(left top, #232526, #414345); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom right, #232526, #414345); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom right, #232526, #414345); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom right, #232526, #414345);
+    }
+    /*
+    #clearingdiv {
+        clear: both;
+    }
+    */
+
+    #header {
+        background: none;
+        width: 100%;
+        margin: 0px;
+        padding-left: 0px;
+    }
+
+    #footer {
+        background: none;
+        border-top-style: double;
+        border-top-width: 4px;
+        border-top-color: #000000;
+        padding-top: 25px;
+        box-shadow: 0px 500px 0px 500px #000;
+    }
+
+    #homepage_link {
+        font-size: 60px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #header > p {
+        padding: 0px;
+    }
+
+    #description {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+
+    .sidenav {
+        background: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .sidenav a {
+        border-color: #ffffff ;
+        border-width: 1px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        font-size: 20px;
+        width: 215px;
+        text-align: left;
+    }
+
+    .sidenav a:hover {
+        background: #555555;
+    }
+
+    #page_title {
+        display: none;
+    }
+    #page_title_desktop {
+        display: block;
+        padding-left: 0px;
+    }
+
+
+    .gallery_title {
+        color: rgb(235, 235, 235);
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+    .item_description {
+        width: 70%;
+        max-width: 650px;
+        margin-bottom: 25px;
+    }
+
+    .gallery_description {
+        color: rgb(235, 235, 235);
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .item_image {
+        width: 70%;
+        max-width: 650px;
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+}

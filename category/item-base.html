@@ -1,0 +1,14 @@
+{% extends "category-base.html" %}
+
+{% block content %}
+<!--<h2 class="item_title col-xs-11">{{ entry_name }}</h2>-->
+{% for image_path in image_paths %}
+<div class="">
+    <div class="">
+        <a href="{{ image_path }}" data-lightbox="imageseries"><img class="item_image" src="{{ image_path }}" alt=" "></a>
+    </div>
+</div>
+{% endfor %}
+<div class="gallery_description item_description">{{ description }}</div>
+{% endblock %}
+
